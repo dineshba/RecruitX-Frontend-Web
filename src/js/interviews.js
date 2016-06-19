@@ -2,6 +2,9 @@ import React from "react"
 import Interview from "./interview.js"
 
 const Interviews = React.createClass({
+  getInitialState() {
+    return {interviews: []}
+  },
   componentDidMount: function() {
     this.state.data = fetch(api_url, {
       headers: {

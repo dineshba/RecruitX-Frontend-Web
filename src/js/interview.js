@@ -1,10 +1,11 @@
 import React from "react"
+import Candidate from "./candidate.js"
 
 const Interview = React.createClass({
   render() {
     return(
       <div>
-        <p>{this.props.interview.candidate.first_name} {this.props.interview.candidate.last_name}</p>
+        <Candidate candidate={this.props.interview.candidate} />
         <p>{this.props.interview.start_time}</p>
       </div>
     );
